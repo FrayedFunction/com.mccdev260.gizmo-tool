@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+
 using UnityEngine;
 
 namespace MccDev260.GizmoTool
@@ -68,7 +68,7 @@ namespace MccDev260.GizmoTool
         // Ray
         [HideInInspector] public Vector3 rayDirection;
         #endregion
-
+#if UNITY_EDITOR
         #region Public Methods
         public void SetColor(string hexCode) => SetColor(HexToColor(hexCode));
 
@@ -110,6 +110,6 @@ namespace MccDev260.GizmoTool
             // Divide by max byte value to clamp between 0 - 1.
             return new Color(r / 255f, g / 255f, b / 255f);
         }
+#endif
     }
 }
-#endif

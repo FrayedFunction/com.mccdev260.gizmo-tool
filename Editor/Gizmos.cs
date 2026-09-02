@@ -1,11 +1,11 @@
 using System;
 using UnityEngine;
 
-# if UNITY_EDITOR
 namespace MccDev260.GizmoTool
 {
     internal static class Gizmos
     {
+#if UNITY_EDITOR
         internal static void DrawSphere(Vector3 worldPos, float radius, Color colour)
         {
             UnityEngine.Gizmos.color = colour;
@@ -90,6 +90,6 @@ namespace MccDev260.GizmoTool
             UnityEngine.Gizmos.color = color;
             UnityEngine.Gizmos.DrawRay(originPos, direction);
         }
+#endif
     }
 }
-#endif

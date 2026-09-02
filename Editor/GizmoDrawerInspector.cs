@@ -1,6 +1,5 @@
-﻿#if UNITY_EDITOR
-    using UnityEngine;
-    using UnityEditor;
+﻿using UnityEngine;
+using UnityEditor;
 
 namespace MccDev260.GizmoTool
 {
@@ -36,7 +35,7 @@ namespace MccDev260.GizmoTool
         serProp_useOriginTransformValues,
         serProp_vec3RayDirection;
         #endregion
-
+#if UNITY_EDITOR
         GizmoDrawer gizmoDrawer;
 
         private void OnEnable()
@@ -244,6 +243,7 @@ namespace MccDev260.GizmoTool
 
             return true;
         }
+#endif
     }
 }
-#endif
+
